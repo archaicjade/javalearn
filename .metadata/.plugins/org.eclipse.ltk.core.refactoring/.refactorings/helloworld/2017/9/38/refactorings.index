@@ -1,0 +1,3 @@
+1505829933947	Extract method 'getMethodInfo'
+1505830386599	Extract method 'getFieldInfo'
+1505830634283	Extract method 'getConstructorInfo'

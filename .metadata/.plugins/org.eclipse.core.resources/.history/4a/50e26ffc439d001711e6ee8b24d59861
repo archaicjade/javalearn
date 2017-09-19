@@ -1,0 +1,45 @@
+package com.bigball.helloworld;
+
+import java.lang.reflect.Method;
+
+public final class ClassInfo {
+
+	private static Class<?> currentClass = null;
+
+	public static void GetClassInfo(String className) throws ClassNotFoundException {
+
+		if (className == null || className.isEmpty())
+			return;
+
+		currentClass = Class.forName(className);
+
+		if (currentClass == null)
+			return;
+
+		getMethodInfo();
+
+	}
+
+	private static void getMethodInfo() {
+		Method[] ms = currentClass.getMethods();
+
+		for (Method method : ms) {
+			System.out.println("+++++++++++++++++++++++=++");
+			System.out.println("+方法名：" + method.getName());
+
+			Class<?> returnType = method.getReturnType();
+
+			System.out.println("+返回类型：" + returnType.getName());
+
+			Class<?>[] params = method.getParameterTypes();
+
+			for (Class<?> class1 : params) {
+				System.out.print("+参数类型：（" + class1.getName() + ",");
+			}
+
+			System.out.println("）");
+
+		}
+	}
+
+}
