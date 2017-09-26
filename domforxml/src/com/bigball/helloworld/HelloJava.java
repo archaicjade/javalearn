@@ -2,14 +2,9 @@ package com.bigball.helloworld;
 
 import java.io.IOException;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 /**
@@ -18,44 +13,13 @@ import org.xml.sax.SAXException;
  */
 public final class HelloJava {
 
-	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+	public static void main(String[] args)
+			throws ParserConfigurationException, SAXException, IOException, TransformerException {
 		// TODO Auto-generated method stub
 
-		// try {
-		// ClassInfo.GetClassInfo("com.bigball.helloworld.ClassInfo");
-		// } catch (ClassNotFoundException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// }
+		XmlHelper.ParserXml();
 
-		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-		DocumentBuilder db = dbf.newDocumentBuilder();
-		Document doc = db.parse("books.xml");
-		NodeList booklist = doc.getElementsByTagName("Book");
-
-		for (int i = 0; i < booklist.getLength(); i++) {
-
-			Node book = booklist.item(i);
-
-			NamedNodeMap attrs = book.getAttributes();
-			for (int j = 0; j < attrs.getLength(); j++) {
-				Node attr = attrs.item(j);
-				System.out.println(attr.getNodeName() + ":" + attr.getNodeValue());
-			}
-
-			NodeList childNodes = book.getChildNodes();
-
-			for (int j = 0; j < childNodes.getLength(); j++) {
-				Node n = childNodes.item(j);
-				if (n.getNodeType() == Node.ELEMENT_NODE) {
-
-					System.out.println(n.getNodeName() + ":" + n.getFirstChild().getNodeValue());
-					System.out.println(n.getNodeName() + ":" + n.getTextContent());
-				}
-			}
-
-		}
+		XmlHelper.createXml();
 
 	}
-
 }
