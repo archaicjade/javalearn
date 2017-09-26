@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BookStore>
+<Book id="1">
+    <Title><aa>aaa</aa>Bitch</Title>
+    <Author>BigBall</Author>
+    <ISON>1</ISON>
+</Book>
+<Book id="2">
+    <Title>Bitch2</Title>
+    <Author>BigBall</Author>
+    <ISON>2</ISON>
+</Book>
+</BookStore>
