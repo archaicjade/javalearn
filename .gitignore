@@ -5,3 +5,11 @@
 *.txt
 
 *.ini
+
+*.snap
+
+*.resources
+
+*.history
+
+*.dat

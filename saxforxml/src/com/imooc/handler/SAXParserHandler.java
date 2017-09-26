@@ -22,12 +22,6 @@ public class SAXParserHandler extends DefaultHandler {
 	private Method method = null;
 	private String methodName = null;
 
-	/*
-	 * (non-Javadoc) 用来遍历xml的开始标签
-	 * 
-	 * @see org.xml.sax.helpers.DefaultHandler#startElement(java.lang.String,
-	 * java.lang.String, java.lang.String, org.xml.sax.Attributes)
-	 */
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 		// TODO Auto-generated method stub
@@ -76,12 +70,6 @@ public class SAXParserHandler extends DefaultHandler {
 		currentValue = (new String(ch, start, length)).trim();
 	}
 
-	/*
-	 * (non-Javadoc) 用来遍历xml的结束标签
-	 * 
-	 * @see org.xml.sax.helpers.DefaultHandler#endElement(java.lang.String,
-	 * java.lang.String, java.lang.String)
-	 */
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 		// TODO Auto-generated method stub
@@ -114,15 +102,10 @@ public class SAXParserHandler extends DefaultHandler {
 		}
 
 		if (qName.equals("KeyItem")) {
-			list.add(ic);
+			getList().add(ic);
 		}
 	}
 
-	/*
-	 * (non-Javadoc) 用来标识解析开始
-	 * 
-	 * @see org.xml.sax.helpers.DefaultHandler#startDocument()
-	 */
 	@Override
 	public void startDocument() throws SAXException {
 		// TODO Auto-generated method stub
@@ -133,19 +116,22 @@ public class SAXParserHandler extends DefaultHandler {
 		for (Method method : methods) {
 			methodList.add(method.getName());
 		}
-		list = new ArrayList<InvokeConfig>();
+		setList(new ArrayList<InvokeConfig>());
 
 	}
 
-	/*
-	 * (non-Javadoc) 用来标识解析结束
-	 * 
-	 * @see org.xml.sax.helpers.DefaultHandler#endDocument()
-	 */
 	@Override
 	public void endDocument() throws SAXException {
 		// TODO Auto-generated method stub
 		super.endDocument();
-		System.out.println(list.size());
+		System.out.println(getList().size());
+	}
+
+	public ArrayList<InvokeConfig> getList() {
+		return list;
+	}
+
+	public void setList(ArrayList<InvokeConfig> list) {
+		this.list = list;
 	}
 }
