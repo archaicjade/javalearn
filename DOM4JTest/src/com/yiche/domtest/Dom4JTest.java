@@ -1,43 +1,25 @@
 package com.yiche.domtest;
 
-import java.io.File;
-import java.util.Iterator;
-import java.util.List;
+import java.io.IOException;
 
-import org.dom4j.Attribute;
-import org.dom4j.Document;
 import org.dom4j.DocumentException;
-import org.dom4j.Element;
-import org.dom4j.io.SAXReader;
 
 public class Dom4JTest {
-	
-	@SuppressWarnings("unchecked")
-	public static void main(String[] args) throws DocumentException {
+
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		SAXReader reader = new SAXReader();
+		try {
+			DOM4JHelper.parseXml();
 
-		Document doc = reader.read(new File("src/res/getcase.xml"));
+			DOM4JHelper.createXml();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 
-		Element el = doc.getRootElement();
-		Iterator<?> iit = el.elementIterator();
-
-		while (iit.hasNext()) {
-			Element one = (Element) iit.next();
-			List<Attribute> oneAttr = one.attributes();
-
-			for (Attribute attribute : oneAttr) {
-				System.out.println("节点名称" + attribute.getName() + ":" + attribute.getValue());
-			}
-
-			Iterator<?> keyitem = one.elementIterator();
-			while (keyitem.hasNext()) {
-				Element item = (Element) keyitem.next();
-
-				System.out.println(item.getName() + ":" + item.getStringValue());
-			}
-
+		} catch (DocumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 	}
