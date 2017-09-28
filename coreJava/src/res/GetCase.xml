@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<InvokeConfig>
+  <KeyItem ID="通过逻辑层获取热门车型">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Car</ClassName>
+    <MethodName>GetHotModelsIds</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层子品牌ID获取口碑列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetTopicIdsByCsId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层用户车款精华追加分词获取口碑列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetTopicIdsByUserCar</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层口碑ID获取口碑内容">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetTopicByTopicId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层口碑ID获取未删除口碑内容">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetTopicByTopicIdForContent</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取一个带有车款的车型">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Car</ClassName>
+    <MethodName>GetSerialIdBySerialId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取主品牌下所有车款信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Car</ClassName>
+    <MethodName>GetSerialIdsByMasterID</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取子品牌ID下所有车款信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Car</ClassName>
+    <MethodName>kb_GetSerialListByBrandId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取主品牌ID下所有车型信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Car</ClassName>
+    <MethodName>kb_GetSerialListByMasterId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取品牌下所有车款信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Car</ClassName>
+    <MethodName>GetSerialIdsByBrandID</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层按条件选车">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Car</ClassName>
+    <MethodName>GetSelectCar</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取用户车款信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_UserCar</ClassName>
+    <MethodName>GetUserCarIdByUserIdAndTrimId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过用户名Id车款Id获取人车信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_UserCar</ClassName>
+    <MethodName>GetUserCarIdByUserIdTrimId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取多个用户车款信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_UserCar</ClassName>
+    <MethodName>GetUserCarIdByUserTrim</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取一个单词">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Word</ClassName>
+    <MethodName>GetWordById</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取多个单词">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Word</ClassName>
+    <MethodName>GetWordByIds</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取常见问题信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Issues</ClassName>
+    <MethodName>GetIssuesIdsBySerialId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层车型ID获取分词信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Word</ClassName>
+    <MethodName>GetWordByIdList</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层车型ID和分项ID获取分词信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Word</ClassName>
+    <MethodName>GetWordIdsBySerialIdAndCategory</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层车型ID获取车款信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Trims</ClassName>
+    <MethodName>GetTrimsBySerialId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层车款ID获一个车款信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Trims</ClassName>
+    <MethodName>GetTrimByTrimId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取口碑标签列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Tag</ClassName>
+    <MethodName>GetTagIdsByTopicId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取评论回复列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Posts</ClassName>
+    <MethodName>GetPostIdsByTopicId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取一个评论回复">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Posts</ClassName>
+    <MethodName>GetPostByPostId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过车型车款获取单个油耗">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Fuel</ClassName>
+    <MethodName>GetStatisticsFuelByMultiCondition</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层口碑ID获取分词列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Word</ClassName>
+    <MethodName>GetWordsByTopicId</MethodName>
+  </KeyItem>
+  <KeyItem ID="根据用户名判断是否已经提交过油耗信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Fuel</ClassName>
+    <MethodName>IsExistCommitFuelsByUserNameNew</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层用户名称获取口碑列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetTopicIdsByUserName</MethodName>
+  </KeyItem>
+  <KeyItem ID="根据用户ID和车款Id获取用户近期口碑并返回最早的口碑ID">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetTopicIdsByUserIdAndTrimId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层分词ID获取口碑列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetTopicByWordId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层车型ID获取分词列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Word</ClassName>
+    <MethodName>GetWordIdsBySerialId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层车型ID获取油耗列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Fuel</ClassName>
+    <MethodName>GetFuelIdsByModelId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层车型ID获取车款ID获取油耗列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Fuel</ClassName>
+    <MethodName>GetFuelsBySerialIdOrTrimId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层用户车款ID获取口碑列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetUserCarListByCateGoryAndSort</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层车型等级获取同等级车型列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Car</ClassName>
+    <MethodName>GetCompareSerialBySerialId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层单个分词ID获取人车信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetUserCarListByWordId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取精华口碑推荐">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetEssenceTopicByTrimId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取口碑列表通过用户ID">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetTopicsByUserId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取评论列表通过用户ID">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Posts</ClassName>
+    <MethodName>GetPostsListByUserId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层根据Id获取一个车主价格">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_CarPrice</ClassName>
+    <MethodName>GetCarPriceByCarPriceId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层根据Ids获取车主价格列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_CarPrice</ClassName>
+    <MethodName>GetCarPricesByIds</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层根据车主价格Id获取车主价格评论列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_CarPricePosts</ClassName>
+    <MethodName>GetCarPricePostIdsByPriceId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取一个价格评论回复">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_CarPricePosts</ClassName>
+    <MethodName>GetReplyCarPricePostById</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层车型ID获取精华口碑列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetTopicListBySerialId</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取用户数据中心信息">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_User</ClassName>
+    <MethodName>GetUserInfoByIds</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层获取多个车型">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Car</ClassName>
+    <MethodName>GetSerialIds</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层根据车型IDS获取口碑报告列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Report</ClassName>
+    <MethodName>kb_GetReportListBySerialIds</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层根据车型IDS获取最热口碑报告列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Report</ClassName>
+    <MethodName>kb_GetReportListBySerialIdsOrderByCommentCount</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层根据车型IDS获取最新口碑报告列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Report</ClassName>
+    <MethodName>kb_GetReportListBySerialIdsOrderById</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层口碑Id获取口碑列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_Topic</ClassName>
+    <MethodName>GetTopicByTopicIds</MethodName>
+  </KeyItem>
+  <KeyItem ID="通过逻辑层人车Id获取人车列表">
+    <AssemblyPath>KouBei.BLL</AssemblyPath>
+    <ClassName>KouBei.BLL.bll_UserCar</ClassName>
+    <MethodName>GetUserCarByUserCarIds</MethodName>
+  </KeyItem>
+</InvokeConfig>
