@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 INDEX VERSION 1.130+/Volumes/Extend HD/MyGitHub/javalearn/.metadata/.plugins/org.eclipse.jdt.core
+=======
+INDEX VERSION 1.130+/Users/BaiYu/Documents/git-space/javalearn/.metadata/.plugins/org.eclipse.jdt.core
+>>>>>>> origin/master
