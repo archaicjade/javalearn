@@ -2,8 +2,6 @@
 
 *.index
 
-*.txt
-
 *.ini
 
 *.snap
@@ -14,14 +12,6 @@
 
 *.dat
 
-*.resources
+*.xmi
 
-*.ini
-
-*.resources
-
-*.index
-
-*.txt
-
-*.dat
+.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
