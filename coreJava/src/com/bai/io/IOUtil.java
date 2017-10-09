@@ -1,10 +1,16 @@
 package com.bai.io;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+/**
+ * @author BaiYu
+ *
+ */
 public class IOUtil {
 
 	public static void copyFile(File srcFile, File destFile) throws IOException {
@@ -47,6 +53,8 @@ public class IOUtil {
 			}
 
 		}
+
+		in.close();
 	}
 
 	public static void printHexByByteArray(String fileName) throws IOException {
@@ -70,7 +78,8 @@ public class IOUtil {
 				System.out.println();
 			}
 		}
-		System.out.println();
+
+		in.close();
 	}
 
 	/**
@@ -97,6 +106,35 @@ public class IOUtil {
 		}
 
 		in.close();
+	}
+
+	/**
+	 * 进行文件的拷贝，利用带缓冲的字节流
+	 * 
+	 * @param srcFile
+	 * @param destFile
+	 */
+	public static void copyFileByBuffer(File srcFile, File destFile) throws IOException {
+		if (!srcFile.exists()) {
+			throw new IllegalArgumentException("文件：" + srcFile + "不存在");
+		}
+
+		if (!srcFile.isFile()) {
+			throw new IllegalArgumentException(srcFile + "不是文件");
+		}
+
+		BufferedInputStream bis = new BufferedInputStream(new FileInputStream(srcFile));
+
+		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(destFile));
+
+		int c = 0;
+		while ((c = bis.read()) != -1) {
+			bos.write(c);
+			bos.flush();
+		}
+
+		bis.close();
+		bos.close();
 	}
 
 }

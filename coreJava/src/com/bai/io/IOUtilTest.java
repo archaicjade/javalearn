@@ -8,15 +8,30 @@ public class IOUtilTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		try {
-			IOUtil.printHex("src/res/io.txt");
-			System.out.println("----------");
-			IOUtil.printHexByByteArray("src/res/io.txt");
-			System.out.println("----------");
-			IOUtil.printHexByByteArray("src/res/io.txt", true);
-			System.out.println("----------");
+		// try {
+		// IOUtil.printHex("src/res/io.txt");
+		// System.out.println("----------");
+		// IOUtil.printHexByByteArray("src/res/io.txt");
+		// System.out.println("----------");
+		// IOUtil.printHexByByteArray("src/res/io.txt", true);
+		// System.out.println("----------");
+		//
+		// IOUtil.copyFile(new File("src/res/io.txt"), new
+		// File("src/res/ioback.txt"));
+		// } catch (IOException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
 
-			IOUtil.copyFile(new File("src/res/io.txt"), new File("src/res/ioback.txt"));
+		try {
+
+			long start = System.currentTimeMillis();
+
+			IOUtil.copyFileByBuffer(new File("src/res/io.txt"), new File("src/res/io_back.txt"));
+
+			long end = System.currentTimeMillis();
+
+			System.out.println(end - start);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

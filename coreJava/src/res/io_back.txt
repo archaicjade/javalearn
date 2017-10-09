@@ -1,0 +1,30 @@
+IO流（输入流、输出流）
+字节流、字符流
+1.字节流
+1）InputStream、OutputStream
+	InputStream 抽象了应用程序读取数据的方式
+	OutputStream 抽象了应用程序写出数据的方式
+2） EOF = End 读到-1就读到了结尾
+3）输入流基本方法
+int b = in.read();读取一个字节无符号填充到int低8位，-1是EOF；
+in.read(byte[] buf)	读取数据填充到字节数组buf
+in.read(byte[] buf,int start,int size) 读取数据到字节数组buf从buf的start位置开始存放size长度的数据
+4)输出流基本方法
+out.write(int b) 写出一个byte到流，b的低8位
+out.write(byte[] buf) 将buf字节数组写到流
+out.write(byte[] buf,int start,int size)
+
+5）FileInputStream  -->具体实现了在文件上读取数据
+6）FileOutputStream 实现了向文件中写入byte数据的方法
+7）DataOutputStream/DataInputStream
+	对“流”功能的扩展，可以更加方便的读取int，long，字符等类型数据
+	DataOutputStream
+		writeInt()/writeDouble()/writeUTF()
+8) BufferedInputStream&BufferedOutputStream
+	为IO提供了带缓冲区的操作，一般打开文件进行写入或读取操作时，都会加上缓冲，这种流模式
+	提高了IO的输入输出性能；
+	从应用程序中把输入放入文件，相当于将一缸水倒入到另一个缸中；
+	FileOutputStream ----> write()方法相当于一滴滴的把水转移过去
+	DataOutputStream ---> writeXX()方法相当于一瓢一瓢的把水转移过去
+	BufferedOutputStream --> write()方法相当于一瓢一瓢先放入桶中，再从桶中导入缸中
+
