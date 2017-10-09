@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-INDEX VERSION 1.130+/Volumes/Extend HD/MyGitHub/javalearn/.metadata/.plugins/org.eclipse.jdt.core
-=======
 INDEX VERSION 1.130+/Users/BaiYu/Documents/git-space/javalearn/.metadata/.plugins/org.eclipse.jdt.core
-<<<<<<< Updated upstream
->>>>>>> origin/master
-=======
 677361136.index
 524126782.index
-1905197199.index
->>>>>>> Stashed changes
